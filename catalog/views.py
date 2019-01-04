@@ -26,3 +26,16 @@ def index(request):
 
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
+
+
+from django.views import generic
+
+
+class BookListView(generic.ListView):
+    """Generic class-based view for a list of books."""
+    model = Book
+    paginate_by = 2
+
+
+class BookDetailView(generic.ListView):
+    model = Book
