@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <div>
+        <table>
+            <tr>
+                <td><strong>First Name:</strong></td>
+                <td>{{ author.first_name  }}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Last Name:</strong></td>
+                <td>{{ author.last_name }}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Date of Birth:</strong></td>
+                <td>{{ author.date_of_birth }}</td>
+            </tr>
+
+            <tr>
+                <td><strong>Date of Death</strong></td>
+                <td>{{ author.date_of_death }}</td>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
